@@ -60,6 +60,7 @@
       }
 
       class Card extends React.Component{
+
         render(){
           let handStyles = {
             display: "flex",
@@ -75,16 +76,15 @@
           }
           return(
             <>
-              <button onClick={}>
+              <button onClick={ this.drawCard }>
                 Click to Draw a Card
               </button>
-              <button onClick={ shuffle }>
+              <button onClick={ this.shuffle }>
                 Return Cards and Shuffle Deck
               </button>
               <div style={ handStyles }>
                 { this.props.hand.map((card, index) => {
-                  return (
-                    <div style={ cardStyles } key={ index }>
+                  return (<div style={ cardStyles } key={ index }>
                       { card }
                     </div>
                   )
